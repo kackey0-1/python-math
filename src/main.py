@@ -1,6 +1,7 @@
 import pandas as pd
 import h5py
 import numpy as np
+from sklearn.svm import LinearSVC
 
 
 def h5py_method():
@@ -34,9 +35,10 @@ def binary_search(numbers, target_number):
 
 
 if __name__ == '__main__':
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     # 探索したい値
-    target_number = 11
+    # target_number = 11
     # バイナリーサーチの実行
     # print(binary_search(numbers, target_number))
-    print()
+    print(LinearSVC()._impl)
+
