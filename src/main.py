@@ -2,6 +2,7 @@ import pandas as pd
 import h5py
 import numpy as np
 from sklearn.svm import LinearSVC
+from janome.tokenizer import Tokenizer
 
 
 def h5py_method():
@@ -40,5 +41,9 @@ if __name__ == '__main__':
     # target_number = 11
     # バイナリーサーチの実行
     # print(binary_search(numbers, target_number))
-    print(LinearSVC()._impl)
+    # print(LinearSVC()._impl)
+
+    tokenizer = Tokenizer(wakati=True)
+    token = tokenizer.tokenize("すもももももももものうち", wakati=True)
+    print(token)
 
