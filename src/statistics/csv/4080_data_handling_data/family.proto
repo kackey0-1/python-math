@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message Person{
+
+    string name = 1; //氏名
+    int32 age = 2; //年齢
+
+    enum Relationship{
+        FATHER = 0; //父親
+        MOTHER = 1; //母親
+        SON = 2; //息子
+        DAUGHTER = 3; //娘
+        GRANDFATHER = 4; //祖父
+        GRANDMOTHER = 5; //祖母
+    }
+
+   Relationship relationship = 4; //続柄
+}
+
+message Family{
+    repeated Person person = 1;
+}
